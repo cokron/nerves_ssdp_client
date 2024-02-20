@@ -11,7 +11,7 @@ defmodule Nerves.SsdpClient.Mixfile do
       start_permanent: Mix.env == :prod,
       deps: deps(),
       description: "Client for Simple Service Discovery Protocol",
-      package: package,
+      package: package(),
       name: "Nerves.SSDPClient",
       docs: docs() ]
   end
@@ -22,7 +22,7 @@ defmodule Nerves.SsdpClient.Mixfile do
   end
 
   defp deps do
-    [ {:nerves_ssdp_server, github: "nerves-project/nerves_ssdp_server", only: :test},
+    [ {:nerves_ssdp_server, github: "cokron/nerves_ssdp_server", only: :test},
       {:ex_doc, "~> 0.11", only: :dev} ]
   end
 
